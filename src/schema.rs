@@ -1,7 +1,7 @@
 table! {
     art (art_id) {
         art_id -> Integer,
-        art_delivery_time -> Datetime,
+        art_delivery_time -> Timestamp,
         art_image -> Text,
         client_demand_client_demand_id -> Integer,
     }
@@ -22,7 +22,8 @@ table! {
 table! {
     client_demand (client_demand_id) {
         client_demand_id -> Integer,
-        client_demand_date -> Datetime,
+        client_demand_date -> Timestamp,
+        client_demand_status -> Integer,
         client_client_id -> Integer,
     }
 }

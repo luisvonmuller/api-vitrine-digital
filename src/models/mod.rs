@@ -1,4 +1,5 @@
 use crate::schema::*;
+pub mod enums;
 
 /* For JSON */
 use serde::{Deserialize, Serialize};

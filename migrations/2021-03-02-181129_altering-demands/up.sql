@@ -1,0 +1,1 @@
+ALTER TABLE `client_demand` ADD COLUMN `client_demand_status` INT(1) NOT NULL AFTER `client_demand_date`;

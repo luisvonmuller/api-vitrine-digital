@@ -64,11 +64,14 @@ async fn main() -> std::io::Result<()> {
             .wrap(middleware::Logger::default())
             .route("/", web::get().to(hello))
             .route("/login", web::get().to(crate::login::execute_login))
+            /* Clients */
             .service(crate::clients::create::add_client)
             .service(crate::clients::read::get_client)
             .service(crate::clients::read::get_all)
             .service(crate::clients::delete::delete_client)
             .service(crate::clients::update::update_client)
+            /* Demands */ 
+            .service(crate::demands::create::add_demand)
     })
     .bind(&bind)?
     .run()
